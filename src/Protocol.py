@@ -5,13 +5,21 @@ from scapy.all import *
 '''
 Define your own protocol
 '''
+
 class Protocol(Packet):
     # Set the name of protcol (Task 2.)
-    name = ''
+    name = 'Hong-Ming'
 
     # Define the fields in protocol (Task 2.)
     fields_desc = [ 
-        
+       StrField('index', '0'),
+       StrField('dept', 'ee', fmt = 'H', remain = 0),
+       IntEnumField('gender', 2, {
+           1: 'female', 
+           2: 'male'
+           }),
+       StrField('id', '0511289', fmt = 'H', remain = 0),
+    
     ]
 
 '''
