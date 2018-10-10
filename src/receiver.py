@@ -52,7 +52,7 @@ def main():
     # Write the receiving secret into file
     with open('./out/recv_secret.txt', 'w') as file:
         for line in received:
-            # file.write('%s' % line)
+            file.write('%s' % line)
     
     # Finishing receiving in a duration
     print '[INFO] Finish receiving packets in a duration'
