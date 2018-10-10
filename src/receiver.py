@@ -39,8 +39,7 @@ Main function
 def main():
     # Sniff packets on destination interface (Task 4.)
     print '[INFO] Sniff on %s' % dst_iface
-    packets = sniff(iface = dst_iface, prn = lambda x:
-    packetHandler(x))
+    packets = sniff(iface = dst_iface, prn = lambda x:packetHandler(x))
     
 
     # Dump the sniffed packet into PCAP file (Task 4.)
