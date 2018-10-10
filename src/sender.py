@@ -7,11 +7,12 @@ from scapy.all import *
 from Protocol import Protocol
 
 # Set source and destination IP address (Task 3.)
-
+src_ip = '10.0.1.1'
+dst_ip = '10.0.1.2'
 
 # Set source and destination port (Task 3.)
-
-
+src_port = 1024
+dst_port = 80
 
 '''
 Main function
@@ -19,11 +20,12 @@ Main function
 def main():
     # Define IP header (Task 3.)
     ip = IP()
+    ip = IP(src = src_ip, dst = dst_ip)
 
     # Define customized header (Task 3.)
-    my_id = ''
-    my_dept = ''
-    my_gender = ''
+    my_id = '0511289'
+    my_dept = 'ee'
+    my_gender = '2'
     student = Protocol(id = my_id, dept = my_dept, gender = my_gender)
 
     # Read file and store into list
