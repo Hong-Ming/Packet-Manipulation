@@ -48,12 +48,25 @@ def main():
         tcp_syn_ack.show()
 
         # TCP connection - ACK (Task 3.)
+        ack = tcp_syn_ack.seq + 1
+        tcp_ack = TCP(sport = src_port, dport = dst_port, flags = 'A', seq = 1, ack = ack)
+        packet = ip / tcp_ack
+        send(packet)
         print '[INFO] Send ACK'
 
         # Send packet with customized header (Task 3.)
+        ack = tcp_ack.seq + 1
+        tcp = TCP(sport = src_port, dport = dst_port, flags = '', seq = 2, ack = ack)
+        packet = ip / tcp / student
+        send(packet)
         print '[INFO] Send packet with customized header'
 
         # Send packet with secret payload (Task 3.)
+        ack = tcp.seq + 1
+        tcp = TCP(sport = src_port, dport = dst_port, flags = '', seq = 3, ack = ack)
+        payload = Raw(secret[i])
+        packet = ip / tcp / payload
+        send(packet)
         print '[INFO] Send packet with secret payload'
 
         
