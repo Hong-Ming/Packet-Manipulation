@@ -7,6 +7,8 @@ This repository is lab for NCTU course "Introduction to Computer Networks 2018".
 
 In this lab we are going to learn how to use Scapy - a powerful interactive packet manipulation program, which can forge or decode packets of a wide number of protocols, send them on wire, capture them, match requests and replies, and much more. By using Scapy, we are going to define our own protocol to compute Fibonacci number through packets sending and receiving.
 
+Please see ![report](/report.pdf) for the detail implementation of this lab.
+
 ---
 ## Objectives
 
@@ -35,8 +37,8 @@ This lab aims to learn how we use Scapy and Python to program a simple network p
     4. Report
 
 ---
-## Authors
-
+## Contributors
+* [Hong-Ming Chiu](https://hong-ming.github.io)
 * [David Lu](https://github.com/yungshenglu)
 
 > This repository is inspired by [Kevin Cyu](https://github.com/kevinbird61). He gave me lots of advices and supports during preparation.
